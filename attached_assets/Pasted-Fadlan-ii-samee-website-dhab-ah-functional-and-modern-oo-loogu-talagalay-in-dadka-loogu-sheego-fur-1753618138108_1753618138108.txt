@@ -1,0 +1,47 @@
+Fadlan ii samee website dhab ah (functional and modern) oo loogu talagalay in dadka loogu sheego fursado dhab ah oo ay lacag online ku kasban karaan, isla markaana dadka kale ay si fudud ugu taageeri karaan mashruuca aniga iigu gaar ah.
+
+Waxaa muhiim ah in website-kan:
+	1.	U ekaado website casri ah oo aan ahayn demo
+	2.	Laga helo bogag kala duwan oo si nidaamsan loo dhisay:
+	•	Homepage
+	•	About Us
+	•	Services (Tilmaamo lacag ku kasbasho)
+	•	Payment / Support (meel ay dadku nagu taageeri karaan)
+	•	Contact
+	•	Register / Login
+	•	Admin Panel (login protected)
+	•	Dashboard for users (simple version)
+	•	Terms & Privacy
+	3.	Ha lahaado database run ah (e.g. SQLite or Replit Database)
+	•	Users ku kaydi email/username/password
+	•	Admin wuxuu awoodaa inuu arko users + messages
+	4.	Bixi fursado lacag bixineed (Meesha ku qor dadku halkaan lacag nagu soo diri karaan):
+	•	Telesom ZAAD (No: 634844506)
+	•	PayPal
+	•	Payoneer
+	•	Bitcoin Wallet (e.g. bc1xyz…)
+	5.	Ha lahaado meel dadka lagu dhiirrigeliyo in ay nagu taageeraan $0.5
+	•	Qoraal ka sheega: “Fadlan nagu taageer $0.5 si aan u sii wadno mashruuca – taageeradaadu waa muhiim.”
+	6.	Fadlan Design-ka ha ahaado mid casri ah, kala hagaagsan oo responsive ah.
+	•	Ha isku dhex daadsanayn
+	•	Navbar ha lahaado (navigation sare leh dropdown haddii loo baahdo)
+	•	Isticmaal Light mode, font-ka ha ahaado mid nadiif ah
+	7.	Homepage-ka ha ku jirto:
+	•	Cinwaan weyn: “Ku Soo Dhawoow Fadal Online – Meesha Fursaduhu Ka Bilaabmaan”
+	•	Qoraal sheegaya: “Website-kan wuxuu dadka tusayaa siyaabaha saxda ah ee ay lacag uga kasban karaan internet-ka. Waxa kale oo aad ka helaysaa adeegyo, casharro, iyo taageero dadnimo.”
+	•	Button weyn: “👉 HALKAN GUJI si aad u Bilowdo Safarkaaga”
+	•	Xayeysiin Adsterra Direct Link (ku dar link button)
+	8.	Ku dar qeybaha soo socda:
+	•	Subscribe Form (email)
+	•	Share buttons (WhatsApp, Facebook, Telegram)
+	•	Like/Follow us (Links to socials)
+	•	Upgrade plan (users must login to upgrade to PRO version with benefits)
+	9.	Admin panel ha lahaado password gaar ah:
+	•	admin username: fadal
+	•	password: Fadal835
+	•	Admin wuxuu edit gareyn karaa pages-ka, arki karaa users, fariimaha contact, iyo lacagaha.
+	10.	Footer-ka ku qor:
+	•	“© 2025 Fadal Online | Website dhab ah oo dadka u adeega”
+	•	Ku dar links: Privacy Policy, Terms, Contact, Support Us
+
+Fadlan samee version HTML + Flask (Python backend) + CSS oo dhammeystiran si aan ugu xiro GitHub kadibna ugu deploy gareeyo Render.
