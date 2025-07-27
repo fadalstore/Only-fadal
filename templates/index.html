@@ -1,3 +1,4 @@
+
 {% extends "base.html" %}
 
 {% block content %}
@@ -7,30 +8,108 @@
         <div class="row align-items-center min-vh-50">
             <div class="col-lg-8 mx-auto text-center">
                 <h1 class="display-4 fw-bold mb-4">
-                    Ku Soo Dhawoow Fadal Online – Meesha Fursaduhu Ka Bilaabmaan
+                    🌟 Ku Soo Dhawoow Fadal Online 🌟
                 </h1>
+                <h2 class="h3 mb-4">Meesha Fursaduhu Ka Bilaabmaan - Website Dhab ah oo Dadka u Adeega</h2>
                 <p class="lead mb-4">
                     Website-kan wuxuu dadka tusayaa siyaabaha saxda ah ee ay lacag uga kasban karaan internet-ka. 
                     Waxa kale oo aad ka helaysaa adeegyo, casharro, iyo taageero dadnimo.
                 </p>
-                <a href="{{ url_for('services') }}" class="btn btn-warning btn-lg px-5 py-3">
-                    👉 HALKAN GUJI si aad u Bilowdo Safarkaaga
-                </a>
+                <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+                    <a href="{{ url_for('services') }}" class="btn btn-warning btn-lg px-4 py-3">
+                        💰 Bilowga Kasabashada
+                    </a>
+                    <a href="{{ url_for('register') }}" class="btn btn-light btn-lg px-4 py-3">
+                        🚀 Bilow Maanta
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Features Section -->
+<!-- Navigation Cards Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h2 class="h3 mb-3">📋 Eeg Dhammaan Bogaggeena</h2>
+                <p class="text-muted">Riix bogga aad rabto in aad gasho</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <!-- About Us Page -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm text-center">
+                    <div class="card-body p-4">
+                        <i class="fas fa-info-circle text-primary fa-3x mb-3"></i>
+                        <h5>About Us</h5>
+                        <p class="text-muted small">Baro wax ka badan Fadal Online</p>
+                        <a href="{{ url_for('about') }}" class="btn btn-outline-primary btn-sm">Eeg</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Services Page -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm text-center">
+                    <div class="card-body p-4">
+                        <i class="fas fa-briefcase text-success fa-3x mb-3"></i>
+                        <h5>Adeegyada</h5>
+                        <p class="text-muted small">Casharro iyo tilmaamo lacag kasbasho</p>
+                        <a href="{{ url_for('services') }}" class="btn btn-outline-success btn-sm">Eeg</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Payment Page -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm text-center">
+                    <div class="card-body p-4">
+                        <i class="fas fa-credit-card text-warning fa-3x mb-3"></i>
+                        <h5>Bixinta</h5>
+                        <p class="text-muted small">Nagu taageero mashruucan</p>
+                        <a href="{{ url_for('payment') }}" class="btn btn-outline-warning btn-sm">Eeg</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Page -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm text-center">
+                    <div class="card-body p-4">
+                        <i class="fas fa-envelope text-info fa-3x mb-3"></i>
+                        <h5>Xidhiidh</h5>
+                        <p class="text-muted small">Nala soo xiriir</p>
+                        <a href="{{ url_for('contact') }}" class="btn btn-outline-info btn-sm">Eeg</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main Features Section -->
 <section class="py-5">
     <div class="container">
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h2 class="h3 mb-3">🎯 Maxay Ku Siinaysaa Fadal Online?</h2>
+            </div>
+        </div>
         <div class="row g-4">
             <div class="col-md-4">
                 <div class="card h-100 border-0 shadow-sm">
                     <div class="card-body text-center p-4">
                         <i class="fas fa-money-bill-wave text-success fa-3x mb-3"></i>
-                        <h5>Fursado Lacag Kasbasho</h5>
+                        <h5>💰 Fursado Lacag Kasbasho</h5>
                         <p>Baro siyaabaha ugu fiican ee aad online ugu kasbi karto lacag halal ah.</p>
+                        <ul class="list-unstyled text-start">
+                            <li>✅ Freelancing</li>
+                            <li>✅ Online Business</li>
+                            <li>✅ Digital Marketing</li>
+                            <li>✅ E-commerce</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -38,8 +117,14 @@
                 <div class="card h-100 border-0 shadow-sm">
                     <div class="card-body text-center p-4">
                         <i class="fas fa-graduation-cap text-primary fa-3x mb-3"></i>
-                        <h5>Casharro Bilaash ah</h5>
+                        <h5>📚 Casharro Bilaash ah</h5>
                         <p>Hel casharro qiimo leh oo ku saabsan online business iyo skills.</p>
+                        <ul class="list-unstyled text-start">
+                            <li>✅ Video Tutorials</li>
+                            <li>✅ Step-by-step Guides</li>
+                            <li>✅ Real Examples</li>
+                            <li>✅ Success Stories</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -47,8 +132,14 @@
                 <div class="card h-100 border-0 shadow-sm">
                     <div class="card-body text-center p-4">
                         <i class="fas fa-hands-helping text-info fa-3x mb-3"></i>
-                        <h5>Taageero 24/7</h5>
+                        <h5>🤝 Taageero 24/7</h5>
                         <p>Hel taageero buuxda oo dadnimo ah marka aad u baahan tahay.</p>
+                        <ul class="list-unstyled text-start">
+                            <li>✅ WhatsApp Support</li>
+                            <li>✅ Email Support</li>
+                            <li>✅ Community Forum</li>
+                            <li>✅ One-on-One Help</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -56,29 +147,64 @@
     </div>
 </section>
 
-<!-- Subscribe Section -->
-<section class="bg-light py-5">
+<!-- User Account Section -->
+<section class="py-4 bg-light">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-6 text-center">
-                <h3 class="mb-4">Subscribe</h3>
-                <form class="d-flex gap-2 mb-4">
-                    <input type="email" class="form-control" placeholder="Email-kaaga gali" required>
-                    <button type="submit" class="btn btn-primary">Subscribe</button>
-                </form>
+            <div class="col-lg-8 text-center">
+                {% if session.user_id %}
+                    <div class="alert alert-success">
+                        <h4>🎉 Ku Soo Dhawoow, {{ session.username }}!</h4>
+                        <p>Waad ku guuleysatay galitaanka website-ka. Hadda waxaad ka faa'iideysan kartaa dhammaan adeegyadeena.</p>
+                        <a href="{{ url_for('dashboard') }}" class="btn btn-success me-2">🏠 Dashboard</a>
+                        <a href="{{ url_for('services') }}" class="btn btn-primary">📋 Eeg Adeegyada</a>
+                    </div>
+                {% else %}
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h4>🔐 Hel Helitaan Buuxa</h4>
+                            <p>Ku biir dadka kale ee ka faa'iideysta Fadal Online</p>
+                            <div class="d-flex justify-content-center gap-3">
+                                <a href="{{ url_for('register') }}" class="btn btn-primary btn-lg">
+                                    📝 Isdiiwaangeli
+                                </a>
+                                <a href="{{ url_for('login') }}" class="btn btn-outline-primary btn-lg">
+                                    🔑 Gal
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
             </div>
         </div>
     </div>
 </section>
 
-<!-- Share Section -->
-<section class="py-4">
+<!-- Subscribe Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 text-center">
+                <h3 class="mb-4">📧 Subscribe si aad u hesho Warbaahinta Cusub</h3>
+                <form class="d-flex gap-2 mb-4">
+                    <input type="email" class="form-control" placeholder="Email-kaaga gali" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+                <p class="text-muted small">Waxaan ku diri doonnaa warbaahinta cusub iyo tilmaamo casri ah</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Social Media Share Section -->
+<section class="py-4 bg-light">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <h4>Share</h4>
-                <div class="d-flex gap-3">
-                    <a href="https://wa.me/?text=Ku%20soo%20dhawoow%20Fadal%20Online" class="btn btn-success btn-sm">
+            <div class="col-md-6 text-center text-md-start">
+                <h4>📢 La Wadaag Asxaabtaada</h4>
+                <div class="d-flex justify-content-center justify-content-md-start gap-3 mt-3">
+                    <a href="https://wa.me/?text=Ku%20soo%20dhawoow%20Fadal%20Online%20-%20Website%20dhab%20ah%20oo%20dadka%20u%20adeega" 
+                       class="btn btn-success btn-sm">
                         <i class="fab fa-whatsapp"></i> WhatsApp
                     </a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=" class="btn btn-primary btn-sm">
@@ -89,14 +215,17 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-6">
-                <h4>Like or Follow Us</h4>
-                <div class="d-flex gap-3">
+            <div class="col-md-6 text-center text-md-end mt-4 mt-md-0">
+                <h4>👍 Nala Socda</h4>
+                <div class="d-flex justify-content-center justify-content-md-end gap-3 mt-3">
                     <a href="#" class="btn btn-outline-primary btn-sm">
                         <i class="fab fa-facebook"></i> Facebook
                     </a>
                     <a href="#" class="btn btn-outline-info btn-sm">
                         <i class="fab fa-twitter"></i> Twitter
+                    </a>
+                    <a href="#" class="btn btn-outline-success btn-sm">
+                        <i class="fab fa-instagram"></i> Instagram
                     </a>
                 </div>
             </div>
@@ -104,43 +233,46 @@
     </div>
 </section>
 
-<!-- Upgrade Plan Section -->
+<!-- Support Us Section -->
 <section class="bg-warning py-5">
     <div class="container">
         <div class="row justify-content-center text-center">
             <div class="col-lg-8">
-                <h3 class="mb-3">Upgrade Plan</h3>
+                <h3 class="mb-3">💝 Nagu Taageero Mashruucan</h3>
                 <p class="mb-4">
-                    Fadlan nagu taageero 0.5 si aan u sii wadno mashruuca -- taageeradaadu waa muhiim.
+                    Fadlan nagu taageero $0.5 si aan u sii wadno mashruuca. 
+                    Taageeradaadu waa muhiim si aan u bixino adeegyo wanaagsan.
                 </p>
                 {% if session.user_id %}
                     <form action="{{ url_for('support') }}" method="post" class="d-inline">
-                        <button type="submit" class="btn btn-dark btn-lg">
-                            Taageero $0.5
+                        <button type="submit" class="btn btn-dark btn-lg px-5">
+                            💰 Taageero $0.5
                         </button>
                     </form>
                 {% else %}
-                    <a href="{{ url_for('login') }}" class="btn btn-dark btn-lg">
-                        LOG IN TO UPGRADE TO PRO
+                    <p class="text-dark mb-3">Fadlan iska diiwaan geli si aad nugu taageerto</p>
+                    <a href="{{ url_for('register') }}" class="btn btn-dark btn-lg px-5">
+                        🔑 ISDIIWAANGELI si aad u TAAGEERTO
                     </a>
                 {% endif %}
             </div>
         </div>
     </div>
 </section>
-<div class="text-center">
-                        <a href="{{ url_for('register') }}" class="btn btn-primary btn-lg">
-                            Bilow Maanta
-                        </a>
-                        <a href="{{ url_for('services') }}" class="btn btn-outline-primary btn-lg ms-3">
-                            Eeg Adeegyada
-                        </a>
-                    </div>
 
-                    <!-- Adsterra Banner Ad -->
-                    <div class="text-center mt-4">
-                        <div id="adsterra-banner" style="min-height: 250px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
-                            <span class="text-muted">Advertisement Space</span>
-                        </div>
+<!-- Adsterra Advertisement -->
+<section class="py-4">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="text-center">
+                    <p class="text-muted small mb-2">Advertisement</p>
+                    <div id="adsterra-banner" style="min-height: 250px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <span class="text-muted">Adsterra Advertisement Space</span>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
