@@ -50,12 +50,29 @@
                                 <i class="fas fa-mobile-alt text-success fa-3x"></i>
                             </div>
                             <h5 class="text-center">Telesom ZAAD</h5>
-                            <p class="text-center">
-                                Lacag ku dir numberkan: <br>
-                                <strong class="text-success fs-4">634844506</strong>
-                            </p>
+                            <div class="mb-3">
+                                <p class="text-center mb-2">
+                                    <strong>Lacag ku dir numberkan:</strong><br>
+                                    <span class="text-success fs-4 fw-bold">634844506</span>
+                                </p>
+                                
+                                <div class="alert alert-info small">
+                                    <h6 class="fw-bold mb-2">Tallaabooyinka ZAAD:</h6>
+                                    <ol class="mb-2">
+                                        <li>*634844506# dial garee</li>
+                                        <li>Dooro "Saad Service"</li>
+                                        <li>Geli lacagta aad rabto ($0.5)</li>
+                                        <li>Xaqiiji transaction-ka</li>
+                                    </ol>
+                                    <p class="mb-0"><strong>Ama:</strong> Si toos ah lacag u dir 634844506</p>
+                                </div>
+                            </div>
                             <div class="text-center">
-                                <small class="text-muted">Isticmaal ZAAD si aad nagu taageerto</small>
+                                <button class="btn btn-success btn-sm" onclick="copyZaadNumber()">
+                                    <i class="fas fa-copy me-2"></i>Copy Number
+                                </button>
+                                <br>
+                                <small class="text-muted mt-2 d-block">Isticmaal ZAAD si aad nagu taageerto</small>
                             </div>
                         </div>
                     </div>
@@ -175,6 +192,22 @@ function copyBitcoinAddress() {
     const address = "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh";
     navigator.clipboard.writeText(address).then(function() {
         alert("Bitcoin address waa la copy gareeyay!");
+    });
+}
+
+function copyZaadNumber() {
+    const zaadNumber = "634844506";
+    navigator.clipboard.writeText(zaadNumber).then(function() {
+        alert("ZAAD number waa la copy gareeyay: " + zaadNumber);
+    }).catch(function() {
+        // Fallback for older browsers
+        const textArea = document.createElement("textarea");
+        textArea.value = zaadNumber;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        alert("ZAAD number waa la copy gareeyay: " + zaadNumber);
     });
 }
 </script>
