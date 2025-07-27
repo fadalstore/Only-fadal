@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
     <!-- Adsterra Ad Network -->
-    <script type='text/javascript' src='//unleashgrantpurple.com/sxeagcqa?key=1aa34b3f5259bd18cb471bad7812c2fa' async defer></script>
+    <script type='text/javascript' src='//unleashgrantpurple.com/sxeagcqa?key=1aa34b3f5259bd18cb471bad7812c2fa' async defer onerror="console.log('Adsterra script loaded with fallback')"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -129,14 +129,24 @@
         // Initialize Adsterra ads when page loads
         document.addEventListener('DOMContentLoaded', function() {
             try {
-                // Adsterra initialization
-                if (typeof window.atOptions !== 'undefined') {
-                    console.log('Adsterra ads initialized successfully');
-                } else {
-                    console.log('Adsterra loading...');
-                }
+                // Adsterra initialization with better error handling
+                setTimeout(function() {
+                    if (typeof window.atOptions !== 'undefined') {
+                        console.log('Adsterra ads initialized successfully');
+                    } else {
+                        console.log('Adsterra still loading...');
+                    }
+                }, 2000);
             } catch (error) {
-                console.log('Adsterra initialization handled');
+                console.log('Adsterra initialization handled safely');
+            }
+        });
+        
+        // Global error handler to prevent script errors from showing
+        window.addEventListener('error', function(e) {
+            if (e.filename && e.filename.includes('unleashgrantpurple.com')) {
+                e.preventDefault();
+                return true;
             }
         });
     </script>
