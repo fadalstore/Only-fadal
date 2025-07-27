@@ -1,0 +1,181 @@
+
+{% extends "base.html" %}
+
+{% block title %}Payment & Support - Fadal Online{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <h1 class="text-center mb-5">Payment & Support</h1>
+            
+            <!-- Support Message -->
+            <div class="card border-0 shadow-sm mb-5">
+                <div class="card-body p-5 text-center">
+                    <h3 class="text-primary mb-4">Nagu Taageero</h3>
+                    <p class="lead">
+                        Fadlan nagu taageero $0.5 si aan u sii wadno mashruuca -- taageeradaadu waa muhiim.
+                    </p>
+                    
+                    {% if session.user_id %}
+                        <form action="{{ url_for('support') }}" method="post" class="mt-4">
+                            <div class="mb-3">
+                                <label for="payment_method" class="form-label">Dooro habka bixinta:</label>
+                                <select name="payment_method" id="payment_method" class="form-select" required>
+                                    <option value="">Dooro hab bixin...</option>
+                                    <option value="telesom_zaad">Telesom ZAAD</option>
+                                    <option value="paypal">PayPal</option>
+                                    <option value="payoneer">Payoneer</option>
+                                    <option value="bitcoin">Bitcoin</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-success btn-lg">
+                                <i class="fas fa-heart me-2"></i>Taageero $0.5
+                            </button>
+                        </form>
+                    {% else %}
+                        <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg">
+                            LOG IN TO UPGRADE TO PRO
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+            
+            <!-- Payment Methods -->
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-mobile-alt text-success fa-3x"></i>
+                            </div>
+                            <h5 class="text-center">Telesom ZAAD</h5>
+                            <p class="text-center">
+                                Lacag ku dir numberkan: <br>
+                                <strong class="text-success fs-4">634844506</strong>
+                            </p>
+                            <div class="text-center">
+                                <small class="text-muted">Isticmaal ZAAD si aad nagu taageerto</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="text-center mb-3">
+                                <i class="fab fa-paypal text-primary fa-3x"></i>
+                            </div>
+                            <h5 class="text-center">PayPal</h5>
+                            <p class="text-center">
+                                Lacag ku dir PayPal: <br>
+                                <strong class="text-primary">support@fadalonline.com</strong>
+                            </p>
+                            <div class="text-center">
+                                <a href="https://paypal.me/fadalonline" class="btn btn-primary btn-sm" target="_blank">
+                                    Dir PayPal
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-credit-card text-warning fa-3x"></i>
+                            </div>
+                            <h5 class="text-center">Payoneer</h5>
+                            <p class="text-center">
+                                Lacag ku dir Payoneer: <br>
+                                <strong class="text-warning">fadal@payoneer.com</strong>
+                            </p>
+                            <div class="text-center">
+                                <small class="text-muted">Isticmaal Payoneer transfer</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="text-center mb-3">
+                                <i class="fab fa-bitcoin text-warning fa-3x"></i>
+                            </div>
+                            <h5 class="text-center">Bitcoin Wallet</h5>
+                            <p class="text-center">
+                                Bitcoin Address: <br>
+                                <small class="text-warning font-monospace">
+                                    bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh
+                                </small>
+                            </p>
+                            <div class="text-center">
+                                <button class="btn btn-warning btn-sm" onclick="copyBitcoinAddress()">
+                                    Copy Address
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Why Support -->
+            <div class="card border-0 shadow-sm mt-5">
+                <div class="card-body p-5">
+                    <h3 class="text-center mb-4">Maxaad taageeradaadu noogu faa'iideysan?</h3>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <i class="fas fa-check-circle text-success me-3 mt-1"></i>
+                                <div>
+                                    <h6>Casharro dheeraad ah</h6>
+                                    <p class="mb-0 small">Hel casharro dheeraad ah oo lacag kasbasho</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <i class="fas fa-check-circle text-success me-3 mt-1"></i>
+                                <div>
+                                    <h6>Taageero gaar ah</h6>
+                                    <p class="mb-0 small">Hel taageero gaar ah oo 24/7 ah</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <i class="fas fa-check-circle text-success me-3 mt-1"></i>
+                                <div>
+                                    <h6>Fursado cusub</h6>
+                                    <p class="mb-0 small">Hel fursado cusub oo lacag kasbasho</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <i class="fas fa-check-circle text-success me-3 mt-1"></i>
+                                <div>
+                                    <h6>Access priority</h6>
+                                    <p class="mb-0 small">Hel access priority oo dhammaan adeegyada</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function copyBitcoinAddress() {
+    const address = "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh";
+    navigator.clipboard.writeText(address).then(function() {
+        alert("Bitcoin address waa la copy gareeyay!");
+    });
+}
+</script>
+{% endblock %}

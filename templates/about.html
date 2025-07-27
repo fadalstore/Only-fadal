@@ -1,0 +1,73 @@
+
+{% extends "base.html" %}
+
+{% block title %}About Us - Fadal Online{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <h1 class="text-center mb-5">About Fadal Online</h1>
+            
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-5">
+                    <h3 class="text-primary mb-4">Yaa nahay?</h3>
+                    <p class="lead">
+                        Fadal Online waa platform dhab ah oo loogu talagalay in dadka lagu siiyo fursado 
+                        lacag ku kasbasho ah oo internet-ka ah. Waanu ku takhasusnahay in aan dadka 
+                        siino xog sax ah, casharro qiimo leh, iyo taageero buuxda.
+                    </p>
+                    
+                    <h3 class="text-primary mb-4 mt-5">Ujeedadeena</h3>
+                    <p>
+                        Ujeedadeenu waa in aan dadka siino:
+                    </p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Fursado lacag kasbasho oo halal ah</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Casharro bilash ah oo qiimo leh</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Taageero dadnimo ah</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Habka lagu bilaabo online business</li>
+                    </ul>
+                    
+                    <h3 class="text-primary mb-4 mt-5">Maxaa kaa heli kartaa?</h3>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="bg-light p-4 rounded">
+                                <h5 class="text-success">💰 Lacag Kasbasho</h5>
+                                <p>Baro habka ugu fican ee aad online ugu kasbi karto lacag halal ah.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bg-light p-4 rounded">
+                                <h5 class="text-primary">📚 Casharro</h5>
+                                <p>Hel casharro qiimo leh oo ku saabsan online business iyo skills.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bg-light p-4 rounded">
+                                <h5 class="text-info">🤝 Taageero</h5>
+                                <p>Hel taageero buuxda oo dadnimo ah marka aad u baahan tahay.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bg-light p-4 rounded">
+                                <h5 class="text-warning">🎯 Guul</h5>
+                                <p>Gaaro yoolalkaaga lacag kasbasho ah si sahlan oo dhab ah.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-5">
+                        <a href="{{ url_for('services') }}" class="btn btn-primary btn-lg">
+                            Eeg Adeegyada
+                        </a>
+                        <a href="{{ url_for('contact') }}" class="btn btn-outline-primary btn-lg ms-3">
+                            Nala soo xiriir
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

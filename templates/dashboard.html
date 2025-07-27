@@ -1,0 +1,99 @@
+
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Fadal Online{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-12 mb-4">
+            <h1>Welcome, {{ session.username }}!</h1>
+            <p class="lead">Ku soo dhawoow dashboard-kaaga</p>
+        </div>
+    </div>
+    
+    <div class="row g-4">
+        <!-- Quick Stats -->
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body text-center p-4">
+                    <i class="fas fa-user-circle text-primary fa-3x mb-3"></i>
+                    <h5>Profile</h5>
+                    <p class="text-muted">Maamul profile-kaaga</p>
+                    <a href="#" class="btn btn-primary btn-sm">Update Profile</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body text-center p-4">
+                    <i class="fas fa-book-open text-success fa-3x mb-3"></i>
+                    <h5>Courses</h5>
+                    <p class="text-muted">Eeg courses-ka aad ka qayb qaadasho</p>
+                    <a href="{{ url_for('services') }}" class="btn btn-success btn-sm">Browse Courses</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body text-center p-4">
+                    <i class="fas fa-heart text-danger fa-3x mb-3"></i>
+                    <h5>Support</h5>
+                    <p class="text-muted">Nagu taageero $0.5</p>
+                    <a href="{{ url_for('payment') }}" class="btn btn-danger btn-sm">Support Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Fursado Cusub</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="bg-light p-3 rounded">
+                                <h6 class="text-success">💰 Freelancing Opportunity</h6>
+                                <p class="mb-2 small">Baro habka aad ugu bilaabi karto freelancing career</p>
+                                <a href="{{ url_for('services') }}" class="btn btn-success btn-sm">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bg-light p-3 rounded">
+                                <h6 class="text-primary">📱 Mobile Apps</h6>
+                                <p class="mb-2 small">Isticmaal apps oo aad lacag kaga kasban karto</p>
+                                <a href="{{ url_for('services') }}" class="btn btn-primary btn-sm">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-warning text-dark">
+                    <h5 class="mb-0">Pro Member Benefits</h5>
+                </div>
+                <div class="card-body">
+                    <p>Ku biir Pro membership si aad u hesho:</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-success me-2"></i>Casharro dheeraad ah</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Taageero gaar ah</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Fursado lacag kasbasho oo dheeraad ah</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Access priority</li>
+                    </ul>
+                    <a href="{{ url_for('payment') }}" class="btn btn-warning">Upgrade to Pro - $0.5</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
