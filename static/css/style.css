@@ -1,77 +1,81 @@
 
-/* Custom styles for Fadal Online */
-
+/* Variables */
 :root {
     --primary-color: #007bff;
-    --secondary-color: #6c757d;
     --success-color: #28a745;
+    --info-color: #17a2b8;
     --warning-color: #ffc107;
     --danger-color: #dc3545;
-    --info-color: #17a2b8;
     --light-color: #f8f9fa;
     --dark-color: #343a40;
 }
 
+/* General styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: var(--dark-color);
-    background-color: #ffffff;
+    color: #333;
 }
 
-/* Hero Section */
+/* Hero section */
 .hero-section {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--info-color) 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, #6610f2 100%);
+    color: white;
     min-height: 60vh;
     display: flex;
     align-items: center;
 }
 
-.bg-gradient-primary {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--info-color) 100%);
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
 
-/* Navigation */
-.navbar-brand {
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-.navbar-nav .nav-link {
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
-    color: var(--primary-color) !important;
+.hero-section .lead {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
 }
 
 /* Cards */
 .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
     border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
 .card-header {
-    border-radius: 15px 15px 0 0 !important;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #6610f2 100%);
+    color: white;
+    border: none;
+    font-weight: bold;
+    text-align: center;
 }
 
 /* Buttons */
 .btn {
     border-radius: 25px;
-    font-weight: 600;
-    transition: all 0.3s ease;
     padding: 10px 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #6610f2 100%);
+    border: none;
 }
 
 .btn-lg {
@@ -105,63 +109,6 @@ body {
     text-transform: uppercase;
     font-size: 0.85rem;
     letter-spacing: 1px;
-}
-
-/* Utilities */
-.min-vh-50 {
-    min-height: 50vh;
-}
-
-.text-purple {
-    color: #6f42c1;
-}
-
-/* Alert customization */
-.alert {
-    border-radius: 10px;
-    border: none;
-    font-weight: 500;
-}
-
-/* Badge customization */
-.badge {
-    font-size: 0.75rem;
-    padding: 5px 10px;
-    border-radius: 15px;
-}
-
-/* Footer */
-footer {
-    background: linear-gradient(135deg, var(--dark-color) 0%, #2c3e50 100%);
-}
-
-footer a {
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: var(--primary-color) !important;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .hero-section {
-        min-height: 40vh;
-        text-align: center;
-    }
-    
-    .hero-section h1 {
-        font-size: 2rem;
-    }
-    
-    .card-body {
-        padding: 1.5rem;
-    }
-    
-    .btn-lg {
-        padding: 12px 25px;
-        font-size: 1rem;
-    }
 }
 
 /* Animation */
@@ -220,8 +167,62 @@ footer a:hover {
     border-color: var(--info-color);
 }
 
-/* Mobile optimizations */
-@media (max-width: 576px) {
+/* Utilities */
+.min-vh-50 {
+    min-height: 50vh;
+}
+
+.text-purple {
+    color: #6f42c1;
+}
+
+/* Alert customization */
+.alert {
+    border-radius: 10px;
+    border: none;
+    font-weight: 500;
+}
+
+/* Badge customization */
+.badge {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, var(--dark-color) 0%, #2c3e50 100%);
+}
+
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 40vh;
+        text-align: center;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .card-body {
+        padding: 1.5rem;
+    }
+    
+    .btn-lg {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+    
     .container {
         padding-left: 15px;
         padding-right: 15px;
@@ -233,5 +234,19 @@ footer a:hover {
     
     .hero-section .lead {
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+    
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    .hero-section h1 {
+        font-size: 1.8rem;
     }
 }

@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
     <!-- Adsterra Ad Network -->
-    <script type='text/javascript' src='//unleashgrantpurple.com/sxeagcqa?key=1aa34b3f5259bd18cb471bad7812c2fa'></script>
+    <script type='text/javascript' src='//unleashgrantpurple.com/sxeagcqa?key=1aa34b3f5259bd18cb471bad7812c2fa' async defer></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -128,8 +128,16 @@
     <script>
         // Initialize Adsterra ads when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            // You can add additional Adsterra configuration here
-            console.log('Adsterra ads initialized');
+            try {
+                // Adsterra initialization
+                if (typeof window.atOptions !== 'undefined') {
+                    console.log('Adsterra ads initialized successfully');
+                } else {
+                    console.log('Adsterra loading...');
+                }
+            } catch (error) {
+                console.log('Adsterra initialization handled');
+            }
         });
     </script>
     
