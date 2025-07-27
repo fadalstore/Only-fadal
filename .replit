@@ -1,3 +1,15 @@
 modules = ["java-graalvm22.3", "nodejs-22", "nodejs-19", "nodejs-20", "nodejs-24", "python-3.10", "swift-5.8", "swift-5.6"]
 [nix]
 channel = "stable-25_05"
+
+[workflows]
+runButton = "Fadal Online"
+
+[[workflows.workflow]]
+name = "Fadal Online"
+author = 45532938
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python app.py"
